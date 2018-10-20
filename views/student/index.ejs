@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <%- include('../partials/styles') %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+    <div class="navbar-fixed">
+        <nav class="blue">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <a href="#!" class="brand-logo">
+                        <%= title %>
+                    </a>
+                    <a href="#" data-activates="mobile-demo" class="button-collapse">
+                        <i class="material-icons">menu</i>
+                    </a>
+                    <ul class="right hide-on-med-and-down">
+                        <li>
+                            <a href=""></a>
+                        </li>
+                        <li>
+                            <a href=""></a>
+                        </li>
+                        <li>
+                            <a href=""></a>
+                        </li>
+                        <li>
+                            <a href=""></a>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="side-nav" id="mobile-demo">
+                    <li>
+                        <a href=""></a>
+                    </li>
+                    <li>
+                        <a href=""></a>
+                    </li>
+                    <li>
+                        <a href=""></a>
+                    </li>
+                    <li>
+                        <a href=""></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <main>
+        <div class="container mt-2">
+            <div class="center">
+                <img src="http://studentservices.lasu.edu.ng/returningstudents/images/stud_image/150591045.jpg" alt=""
+                    class="thumbnail z-depth-1 mb-2">
+            </div>
+            <div class="divider mb-2"></div>
+            <form action="" class="row">
+                <div class="input-field col s12">
+                    <select name="" id="">
+                        <option value="" disabled selected>CHOOSE YOUR VOCATION</option>
+                        <option value="1">Animal Husbandry (Bee Keeping)</option>
+                        <option value="2">Bead Making</option>
+                        <option value="3">Building Drawing</option>
+                        <option value="4">Computer and Laptop Repairs</option>
+                        <option value="5">Crop Farming</option>
+                        <option value="6">Drama and Entertainment (Drama)</option>
+                        <option value="7">Drama and Entertainment (Entertainment)</option>
+                        <option value="8">Drama and Entertainment (Music)</option>
+                        <option value="9">Event Planning</option>
+                        <option value="10">Fish Farming</option>
+                        <option value="11">Food Processing</option>
+                        <option value="12">Furnishing and wood work</option>
+                        <option value="13">Hat Making</option>
+                        <option value="14">Hotel Management</option>
+                        <option value="15">Leather Making</option>
+                        <option value="16">Makeup and Cosmetics</option>
+                        <option value="17">Motor Vehicles repairs </option>
+                        <option value="18">Photography</option>
+                        <option value="19">Setting Up a Pharmacy</option>
+                        <option value="20">Snail Breeding and Grass Cutter Breeding</option>
+                        <option value="21">Soap Detergent and Toiletries Production</option>
+                        <option value="22">Tailoring and Fashion Design</option>
+                        <option value="23">Water Treatment and Packaging</option>
+                        <option value="24">Welding Metal Works and Fabrication</option>
+                        <option value="24">Writing and Publishing</option>
+                    </select>
+                </div>
+                <div class="input-field col s12 l4 m6">
+                    <input value="EWETAN" id="first_name" type="text" class="validate">
+                    <label for="first_name">Surname</label>
+                </div>
+                <div class="input-field col s12 l4 m6">
+                    <input value="SEYON" id="first_name" type="text" class="validate">
+                    <label for="first_name">Middle Name</label>
+                </div>
+                <div class="input-field col s12 l4 m6">
+                    <input value="EMMANUEL" id="first_name" type="text" class="validate">
+                    <label for="first_name">First Name</label>
+                </div>
+                <div class="input-field col s12 l4 m6">
+                    <input value="150591000" id="first_name" type="number" class="validate">
+                    <label for="first_name">Matric Number</label>
+                </div>
+                <div class="input-field col s12 l4 m6">
+                    <input value="07051967425" id="first_name" type="number" class="validate">
+                    <label for="first_name">Phone Number</label>
+                </div>
+
+                <div class="input-field col s12 l4 m6">
+                    <input value="COMPUTER SCIENCE" id="first_name" type="text" class="validate">
+                    <label for="first_name">Deparment</label>
+                </div>
+                <div class="divider"></div>
+                <div class="center">
+                    <a href="" class="btn blue waves-effect-wave-light">submit</a>
+                </div>
+            </form>
+
+        </div>
+    </main>
+    <%- include('../partials/footer') %>
+    <%- include('../partials/scripts') %>
+    <script>
+        $(document).ready(function () {
+            $(".button-collapse").sideNav();
+            $('.slider').slider({
+                height: 500
+            });
+            $('.parallax').parallax();
+            $('select').material_select();
+        });
+    </script>
+</body>
+
+</html>
