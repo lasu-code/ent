@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="navbar-fixed">
+    <header class="navbar-fixed">
         <nav class="blue">
             <div class="nav-wrapper">
                 <div class="container">
@@ -20,21 +20,19 @@
                     </a>
                     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                     <ul class="right hide-on-med-and-down">
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
+                        <li><a href="/"><i class="material-icons left">home</i>HOME</a></li>
+                        <li><a href="/admin/login"><i class="material-icons left">lock_outline</i>LOGIN</a></li>
+                        <li  class="active"><a href="/admin/signup"><i class="material-icons left">person</i>SIGN UP</a></li>
                     </ul>
                 </div>
                 <ul class="side-nav" id="mobile-demo">
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
+                    <li><a href="/"><i class="material-icons left">home</i>HOME</a></li>
+                    <li><a href="/admin/login"><i class="material-icons left">lock_outline</i>LOGIN</a></li>
+                    <li  class="active"><a href="/admin/signup"><i class="material-icons left">person</i>SIGN UP</a></li>
                 </ul>
             </div>
         </nav>
-    </div>
+    </header>
     <main>
         <div class="container">
             <div class="row">
@@ -47,10 +45,6 @@
                                     <label for="Surname">Full Name</label>
                                 </div>
 
-                              
-
-                              
-
                                 <div class="input-field col s6">
                                     <input id="Surname" type="number" data-length="9" class="validate">
                                     <label for="Surname">Staff ID</label>
@@ -61,8 +55,8 @@
                                     <label for="Phone Number">Phone Number</label>
                                 </div>
                                 <div class="input-field col s12">
-                                    <input id="Student Email" type="email" class="validate">
-                                    <label for="Student Email">Staff Email</label>
+                                    <input id="admin Email" type="email" class="validate">
+                                    <label for="admin Email">Staff Email</label>
                                 </div>
 
                                 <!-- <div class="input-field col s12">

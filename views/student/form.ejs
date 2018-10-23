@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <%- include('../partials/styles') %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+  <header></header>
+  <main>
+        <div class="container mt-6">
+            <div class="center">
+                <img src="http://studentservices.lasu.edu.ng/returningstudents/images/stud_image/150591045.jpg" alt=""
+                    class="thumbnail z-depth-1 mb-2">
+            </div>
+            <div class="divider mb-2"></div>
+            <form action="" class="row">
+                    <div class="input-field col s12">
+                            <input value="PHOTOGRAPHY" id="first_name" type="text" class="validate" disabled>
+                            <label for="first_name">Vocation</label>
+                        </div>
+                <div class="input-field col s12 l4 m6">
+                    <input value="EWETAN" id="first_name" type="text" class="validate" disabled>
+                    <label for="first_name">Surname</label>
+                </div>
+                <div class="input-field col s12 l4 m6">
+                    <input value="SEYON" id="first_name" type="text" class="validate" disabled>
+                    <label for="first_name">Middle Name</label>
+                </div>
+                <div class="input-field col s12 l4 m6">
+                    <input value="EMMANUEL" id="first_name" type="text" class="validate" disabled>
+                    <label for="first_name">First Name</label>
+                </div>
+                <div class="input-field col s12 l4 m6">
+                    <input value="150591000" id="first_name" type="number" class="validate" disabled>
+                    <label for="first_name">Matric Number</label>
+                </div>
+                <div class="input-field col s12 l4 m6">
+                    <input value="07051967425" id="first_name" type="number" class="validate" disabled>
+                    <label for="first_name">Phone Number</label>
+                </div>
+
+                <div class="input-field col s12 l4 m6">
+                    <input value="COMPUTER SCIENCE" id="first_name" type="text" class="validate" disabled>
+                    <label for="first_name">Deparment</label>
+                </div>
+                <div class="divider"></div>
+            </form>
+
+        </div>
+    </main>
+    <%- include('../partials/scripts') %>
+    <script>
+        $(document).ready(function () {
+            $(".button-collapse").sideNav();
+            $('.slider').slider({
+                height: 500
+            });
+            $('.parallax').parallax();
+            $('select').material_select();
+        });
+    </script>
+</body>
+
+</html>
