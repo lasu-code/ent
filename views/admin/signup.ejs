@@ -44,23 +44,24 @@
                             </div>
                         </div>
                         <div class="card-content">
-                            <form action="" class="row">
+                            
+                            <form action="#" class="row" method="POST">
                                 <div class="input-field col s12">
-                                    <input id="Surname" type="text" class="validate">
+                                    <input id="Surname" type="text" name="surname" class="validate">
                                     <label for="Surname">Full Name</label>
                                 </div>
 
                                 <div class="input-field col s6">
-                                    <input id="Surname" type="number" data-length="9" class="validate">
+                                    <input id="Surname" type="number" name="staffId" data-length="9" class="validate">
                                     <label for="Surname">Staff ID</label>
                                 </div>
 
                                 <div class="input-field col s6">
-                                    <input id="Phone Number" type="number" data-length="11" class="validate">
+                                    <input id="Phone Number" name="phone" type="number" data-length="11" class="validate">
                                     <label for="Phone Number">Phone Number</label>
                                 </div>
                                 <div class="input-field col s12">
-                                    <input id="admin Email" type="email" class="validate">
+                                    <input id="admin Email" name="email" type="email" class="validate">
                                     <label for="admin Email">Staff Email</label>
                                 </div>
 
@@ -97,20 +98,18 @@
 
                                     </select>
                                 </div>-->
-                            </form>
-                            <div class="card-action">
-                                <div class="center">
-                                    <button class="btn scooter waves-effect">
-                                        <%= title %>
-                                    </button>
-                                </div>
-                            </div>
+                                    <div class="center">
+                                        <input type="submit" value="Admin Signup" class="btn blue waves-effect">
+                                               
+                                    </div>
+
+                                </form>
                         </div>
                     </div>
                     <div class="card scooter">
                         <div class="card-content">
                             <div class="center">
-                                <h6 class="uppercase white-text">already have an account? <a class="bold black-text" href="/login">login</a></h6>
+                                <h6 class="uppercase white-text">already have an account? <a class="bold black-text" href="/admin/login">login</a></h6>
                             </div>
                         </div>
                     </div>

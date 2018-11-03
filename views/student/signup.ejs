@@ -44,33 +44,43 @@
                             </div>
                         </div>
                         <div class="card-content">
-                            <form action="" class="row">
+
+
+                            <form action="#" method="POST" class="row">
                                 <div class="input-field col s6">
-                                    <input id="Surname" type="text" class="validate">
-                                    <label for="Surname">Full Name</label>
+                                    <input id="Surname" type="text" name="surname" class="validate">
+                                    <label for="Surname">Surname</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input id="Surname" type="text" name="middle" class="validate">
+                                    <label for="Surname">Middle</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input id="Surname" type="text" name="other" class="validate">
+                                    <label for="Surname">Other Names</label>
                                 </div>
 
                                 <div class="input-field col s6">
-                                    <input type="text" id="Faculty" class="autocomplete">
+                                    <input type="text" id="Faculty" name="faculty" class="autocomplete">
                                     <label for="Faculty">Faculty</label>
                                 </div>
 
                                 <div class="input-field col s6">
-                                    <input type="text" id="Faculty" class="autocomplete">
+                                    <input type="text" id="Faculty" name="dept" class="autocomplete">
                                     <label for="Faculty">Department</label>
                                 </div>
 
                                 <div class="input-field col s6">
-                                    <input id="Surname" type="number" data-length="9" class="validate">
+                                    <input id="Surname" type="number" name="matric" data-length="9" class="validate">
                                     <label for="Surname">Matric Number</label>
                                 </div>
 
                                 <div class="input-field col s6">
-                                    <input id="Phone Number" type="number" data-length="11" class="validate">
+                                    <input id="Phone Number" type="number" name="number" data-length="11" class="validate">
                                     <label for="Phone Number">Phone Number</label>
                                 </div>
                                 <div class="input-field col s6">
-                                    <input id="Student Email" type="email" class="validate">
+                                    <input id="Student Email" type="email" name="email" class="validate">
                                     <label for="Student Email">Student Email</label>
                                 </div>
 
@@ -107,20 +117,18 @@
 
                                     </select>
                                 </div>-->
-                            </form>
-                            <div class="card-action">
                                 <div class="center">
-                                    <button class="btn scooter waves-effect">
-                                        SIGN UP
-                                    </button>
-                                </div>
-                            </div>
+                                        <input type="submit" value="Student Signup" class="btn blue waves-effect">
+                                               
+                                    </div>
+
+                            </form>
                         </div>
                     </div>
                     <div class="card scooter">
                         <div class="card-content">
                             <div class="center">
-                                <h6 class="uppercase white-text">already have an account? <a class="bold black-text" href="/login">login</a></h6>
+                                <h6 class="uppercase white-text">already have an account? <a class="bold black-text" href="/student/login">login</a></h6>
                             </div>
                         </div>
                     </div>
