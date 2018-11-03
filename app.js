@@ -4,8 +4,14 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+var adminRouter = require('./routes/admin');
+var studentRouter = require('./routes/student');
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+
+
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:27017/AdminSignup');
+
 
 var app = express();
 
@@ -19,8 +25,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use('/admin', adminRouter);
+app.use('/student', studentRouter);
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

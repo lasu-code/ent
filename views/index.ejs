@@ -1,11 +1,227 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <%- include('partials/styles') %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body class="blue-grey darken-4">
+    <header class="navbar-fixed">
+        <div class="navbar-fixed">
+            <nav class="scooter">
+                <div class="nav-wrapper">
+                    <div class="container">
+                        <a href="#!" class="brand-logo">
+                            <%= title %>
+                        </a>
+                        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                        <ul class="right hide-on-med-and-down">
+                            <li class="active"><a href="/"> <i class="material-icons left">home</i>
+                                    HOME</a></li>
+                            <li><a class="dropdown-button" href="#!" data-activates="loginDropdown"> <i class="material-icons left">lock_outline</i>
+                                    LOG IN</a></li>
+                            <li><a class="dropdown-button" href="#!" data-activates="signupDropdown"> <i class="material-icons left">person</i>
+                                    SIGN UP</a></li>
+                            <li><a href=""></a></li>
+                        </ul>
+                    </div>
+                    <ul class="side-nav" id="mobile-demo">
+                        <li class="no-padding">
+                            <ul class="collapsible collapsible-accordion">
+                                <li>
+                                    <a href="/" class="collapsible-header active">HOME</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="no-padding">
+                            <ul class="collapsible collapsible-accordion">
+                                <li>
+                                    <a class="collapsible-header">LOGIN</a>
+                                    <div class="collapsible-body">
+                                        <ul>
+                                            <li><a href="/student/login">STUDENT</a></li>
+                                            <li><a href="/admin/login">ADMIN</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="no-padding">
+                            <ul class="collapsible collapsible-accordion">
+                                <li>
+                                    <a class="collapsible-header">SIGN UP</a>
+                                    <div class="collapsible-body">
+                                        <ul>
+                                            <li><a href="/student/signup">STUDENT</a></li>
+                                            <li><a href="/admin/signup">ADMIN</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <ul id="loginDropdown" class="dropdown-content">
+            <li><a href="/student/login">STUDENT</a></li>
+            <li class="divider"></li>
+            <li><a href="/admin/login">ADMIN</a></li>
+        </ul>
+
+
+        <ul id="signupDropdown" class="dropdown-content">
+            <li><a href="/student/signup">STUDENT</a></li>
+            <li class="divider"></li>
+            <li><a href="/admin/signup">ADMIN</a></li>
+        </ul>
+    </header>
+
+
+
+
+    <main>
+        <div class="parallax-container">
+            <div class="parallax"><img src="images/02.jpg"></div>
+            <div class="items">
+                <h3 class="uppercase white-text">lasu ent</h3>
+            </div>
+        </div>
+
+
+
+        <section class="container">
+            <div class="card">
+                <div class="card-content">
+                    <div class="center">
+                        <h4 class="uppercase">about</h4>
+                        <div class="divider"></div>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem nemo
+                            cum obcaecati
+                            neque omnis quibusdam consequatur et animi? Eos odio excepturi reprehenderit saepe unde quo
+                            atque earum soluta deleniti? Aut soluta non nam repellendus cupiditate inventore qui enim
+                            iusto porro explicabo eligendi, unde, iure quos veritatis fugiat nisi veniam dolore
+                            provident adipisci natus odit laudantium. Placeat consectetur minus harum earum dolores
+                            architecto, magni debitis rem iure quidem hic, modi dolorum quam repellendus quasi eaque
+                            quia dolore ea delectus impedit. At odio itaque eius? Perspiciatis, maxime deserunt magni
+                            ipsum delectus fugiat, corporis tempore incidunt expedita animi sapiente doloremque
+                            perferendis velit quibusdam illo nihil nostrum asperiores nesciunt repudiandae nobis? Iusto
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="parallax-container parallax-2">
+                <div class="parallax"><img src="images/duotone(4).png"></div>
+            </div>
+
+
+            <div class="card">
+                <div class="card-content">
+                    <div class="center">
+                        <h4 class="uppercase">title</h4>
+                        <p class="capitalize">some of the vocations we offer</p>
+                        <div class="divider"></div>
+                    </div>
+                    <div class="row mt-2">
+
+
+                        <div class="col s12 l4 m6">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="/images/pic01.jpg" class="thumbnail" alt="">
+                                    <span class="uppercase card-title">title</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col s12 l4 m6">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="/images/pic01.jpg" class="thumbnail" alt="">
+                                    <span class="uppercase card-title">title</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col s12 l4 m6">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="/images/pic01.jpg" class="thumbnail" alt="">
+                                    <span class="uppercase card-title">title</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="parallax-container parallax-2">
+                <div class="parallax"><img src="images/duotone(5).png"></div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <div class="center">
+                        <h4 class="uppercase">meet the administrative head</h4>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="mt-2">
+                        <div class="row">
+                            <div class="col s12 l4 offset-l4">
+                                <div class="center">
+                                    <div class="card">
+                                        <div class="card-image">
+                                            <img src="/images/pic01.jpg" width="200" class="thumbnail" alt="">
+                                            <span class="uppercase card-title">Name: John Doe</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="parallax-container parallax-2 mb-2">
+                <div class="parallax"><img src="images/duotone(7).png"></div>
+            </div>
+        </section>
+    </main>
+    <style>
+        .parallax-2 {
+            height: 200px;
+        }
+
+        .parallax-container {
+            display: flex;
+        }
+
+        .items {
+            margin: auto;
+        }
+    </style>
+    <%- include('partials/footer') %>
+    <%- include('partials/scripts') %>
+    <script>
+        $(document).ready(function () {
+            $(".button-collapse").sideNav();
+            $('.carousel.carousel-slider').carousel({
+                indicators: true
+            });
+            $('.parallax').parallax();
+            $(".dropdown-button").dropdown({
+
+            });
+        });
+    </script>
+</body>
+
 </html>

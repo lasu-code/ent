@@ -1,8 +1,79 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+ body {
+     display: flex;
+     min-height: 100vh;
+     flex-direction: column;
+ }
 
-a {
-  color: #00B7FF;
+ main {
+     flex: 1 0 auto;
+ }
+
+ #sidenav-overlay {
+     z-index: -1;
+ }
+
+ .mt-2 {
+     margin-top: 2%;
+ }
+
+ .mb-2 {
+     margin-bottom: 2%;
+ }
+
+ .mt-6 {
+     margin-top: 6%;
+ }
+
+ .uppercase {
+     text-transform: uppercase;
+ }
+
+ .capitalize {
+     text-transform: capitalize;
+ }
+
+ .bold {
+     font-weight: bold;
+ }
+
+ .thumbnail {
+     border: 1px solid #ddd;
+     border-radius: 4px;
+     padding: 5px;
+ }
+
+ .circle-thumbnail {
+     border: 1px solid #ddd;
+     border-radius: 50px;
+     padding: 5px;
+ }
+
+ .prallax-container {
+     display: -webkit-flex;
+     display: -moz-flex;
+     display: -ms-flex;
+     display: -o-flex;
+     display: flex;
+ }
+
+ @font-face {
+     font-family: redressed;
+     src: url(/stylesheets/redressed.woff)
+ }
+
+ body {
+     font-family: redressed;
+ }
+
+ img.thumbnail {
+     width: 170px;
+ }
+
+ .scooter {
+    background: #36D1DC;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #5B86E5, #36D1DC);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
