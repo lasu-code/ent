@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <%- include('../partials/styles') %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body class="">
+    <header class="navbar-fixed">
+    <div class="navbar-fixed">
+        <nav class="scooter">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <a href="#!" class="brand-logo">
+                        <%= title %>
+                    </a>
+                    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="/"> <i class="material-icons left">home</i>
+                                HOME</a></li>
+                        <li><a class="dropdown-button" href="#!" data-activates="loginDropdown"> <i class="material-icons left">lock_outline</i>
+                                LOG IN</a></li>
+                                <li><a class="dropdown-button" href="#!" data-activates="signupDropdown"> <i class="material-icons left">person</i>
+                                    SIGN UP</a></li>
+                        <li><a href=""></a></li>
+                        <li class="active"><a href="/"> <i class="material-icons left">mode_edit</i>
+                            REGISTER</a></li>
+                    </ul>
+                </div>
+                <ul class="side-nav" id="mobile-demo">
+                    <li class="no-padding">
+                        <ul class="collapsible collapsible-accordion">
+                            <li>
+                                <a href="/" class="collapsible-header active">HOME</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="no-padding">
+                        <ul class="collapsible collapsible-accordion">
+                            <li>
+                                <a class="collapsible-header">LOGIN</a>
+                                <div class="collapsible-body">
+                                    <ul>
+                                        <li><a href="/student/login">STUDENT</a></li>
+                                        <li><a href="/admin/login">ADMIN</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="no-padding">
+                        <ul class="collapsible collapsible-accordion">
+                            <li>
+                                <a class="collapsible-header">SIGN UP</a>
+                                <div class="collapsible-body">
+                                    <ul>
+                                        <li><a href="/student/signup">STUDENT</a></li>
+                                        <li><a href="/admin/signup">ADMIN</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- <ul id="loginDropdown" class="dropdown-content">
+        <li><a href="/student/login">STUDENT</a></li>
+        <li class="divider"></li>
+        <li><a href="/admin/login">ADMIN</a></li>
+    </ul> -->
+
+
+    <!-- <ul id="signupDropdown" class="dropdown-content">
+        <li><a href="/student/signup">STUDENT</a></li>
+        <li class="divider"></li>
+        <li><a href="/admin/signup">ADMIN</a></li>
+    </ul> -->
+</header>
+    <main>
+        <div class="container mt-2">
+            <div class="center">
+                <img src="http://studentservices.lasu.edu.ng/returningstudents/images/stud_image/150591045.jpg" alt=""
+                    class="thumbnail z-depth-1 mb-2">
+            </div>
+            <div class="divider mb-2"></div>
+
+
+            <form action="#" method="POST" class="row">
+                <div class="input-field col s6">
+                    <select name="vocation" id="">
+                        <option value="" disabled selected>CHOOSE YOUR VOCATION</option>
+                        <option>Animal Husbandry (Bee Keeping)</option>
+                        <option>Bead Making</option>
+                        <option>Building Drawing</option>
+                        <option>Computer and Laptop Repairs</option>
+                        <option>Crop Farming</option>
+                        <option>Drama and Entertainment (Drama)</option>
+                        <option>Drama and Entertainment (Entertainment)</option>
+                        <option>Drama and Entertainment (Music)</option>
+                        <option>Event Planning</option>
+                        <option>Fish Farming</option>
+                        <option>Food Processing</option>
+                        <option>Furnishing and wood work</option>
+                        <option>Hat Making</option>
+                        <option>Hotel Management</option>
+                        <option>Leather Making</option>
+                        <option>Makeup and Cosmetics</option>
+                        <option>Motor Vehicles repairs </option>
+                        <option>Photography</option>
+                        <option>Setting Up a Pharmacy</option>
+                        <option>Snail Breeding and Grass Cutter Breeding</option>
+                        <option>Soap Detergent and Toiletries Production</option>
+                        <option>Tailoring and Fashion Design</option>
+                        <option>Water Treatment and Packaging</option>
+                        <option>Welding Metal Works and Fabrication</option>
+                        <option>Writing and Publishing</option>
+                    </select>
+                </div>
+                <div class="input-field col s6">
+                    <input id="Surname" type="number" name="matric" data-length="9" class="validate">
+                    <label for="Surname">Matric Number</label>
+                </div>
+                
+                <div class="input-field col s12 l4 m6">
+                    <input value="<%= titled.surnames %>" id="first_name" type="text" class="validate uppercase" disabled>
+                    <label for="first_name">Surname</label>
+                    
+                </div>
+                <div class="input-field col s12 l4 m6">
+                    <input value="<%= titled.middlenames %>" id="first_name" type="text" class="validate uppercase" disabled>
+                    <label for="first_name">Middle Name</label>
+                </div>
+                <div class="input-field col s12 l4 m6">
+                    <input value="<%= titled.others %>" id="first_name" type="text" class="validate uppercase" disabled>
+                    <label for="first_name">First Name</label>
+                </div>
+                <div class="input-field col s12 l4 m6">
+                    <input value="<%= titled.facultys %>" id="first_name" type="text" class="validate uppercase" disabled>
+                    <label for="first_name">Faculty</label>
+                </div>
+                
+
+                <div class="input-field col s12 l4 m6">
+                    <input value="<%= titled.depts %>" id="first_name" type="text" class="validate uppercase" disabled>
+                    <label for="first_name">Department</label>
+                </div>
+                
+                <div class="input-field col s12 l4 m6">
+                    <input value="<%= titled.PhoneNumbers %>" id="first_name" type="number" class="validate" disabled>
+                    <label for="first_name">Phone Number</label>
+                </div>
+
+                <div class="divider"></div>
+                <div class="center">
+                    <input type="submit" value="Submit" class="btn blue waves-effect">
+                           
+                </div>
+            </form>
+
+        </div>
+    </main>
+    <%- include('../partials/footer') %>
+    <%- include('../partials/scripts') %>
+    <script>
+        $(document).ready(function () {
+            $(".button-collapse").sideNav();
+            $('.slider').slider({
+                height: 500
+            });
+            $('.parallax').parallax();
+            $('select').material_select();
+        });
+    </script>
+</body>
+
+</html>
