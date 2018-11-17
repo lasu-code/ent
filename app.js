@@ -9,6 +9,10 @@ var studentRouter = require('./routes/student');
 var indexRouter = require('./routes/index');
 
 
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:27017/AdminSignup');
+
+
 var app = express();
 
 // view engine setup
