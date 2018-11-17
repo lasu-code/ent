@@ -20,16 +20,25 @@
      margin-bottom: 2%;
  }
 
+ .mt-4{
+     margin-top: 3%;
+ }
+
  .mt-6 {
      margin-top: 6%;
  }
-
+.mt-10{
+    margin-top: 10%;
+}
  .uppercase {
      text-transform: uppercase;
  }
 
  .capitalize {
      text-transform: capitalize;
+ }
+ .lowercase{
+     text-transform: lowercase;
  }
 
  .bold {
@@ -77,3 +86,6 @@
     background: linear-gradient(to right, #5B86E5, #36D1DC);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+ .block{
+     width: 100%;
+ }

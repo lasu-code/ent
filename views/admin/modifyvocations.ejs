@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <%- include('../partials/styles') %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body class="">
+    <main>
+        <ul id="slide-out" class="side-nav fixed">
+            <li><div class="user-view">
+                    <div class="background">
+                        <img src="../images/bg.jpg">
+                    </div>
+                    <a href="#!user"><img class="circle" src="../images/rachel.png"></a>
+                    <a href="#!name"><span class="white-text name">John Doe</span></a>
+                    <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+                </div></li>
+            <li><a class="subheader capitalize">collections</a></li>
+            <li><a class="waves-effect" href="/admin/">All Categories</a></li>
+            <li><a class="waves-effect" href="/admin/combinedlist">Combined List</a></li>
+            <li><div class="divider"></div></li>
+            <li><a class="subheader capitalize">actions</a></li>
+            <li><a class="waves-effect" href="/admin/addvocation">Add Vocation</a></li>
+            <li class="active"><a class="waves-effect" href="/admin/modifyvocations">Edit/Delete</a></li>
+
+            <!--<li><a class="waves-effect" href="#!">Third Link With Waves</a></li>-->
+            <!--<li><a class="waves-effect" href="#!">Third Link With Waves</a></li>-->
+        </ul>
+
+
+        <div class="navbar-fixed">
+            <nav class="scooter">
+                <div class="nav-wrapper">
+                    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+                    <div class="col s12">
+                        <a href="" class="breadcrumb">ADMIN</a>
+                        <a href="/admin/dashboard" class="breadcrumb">CATEGORIES</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Edit Vocation</h4>
+                <div class="divider"></div>
+                <div class="row">
+                    <form action="" class="s12">
+                        <div class="row">
+
+                            <div class="input-field col s12">
+                                <input value="Animal Husbandry (Bee Keeping)" id="first_name" type="text" class="validate">
+                                <label for="first_name">Title</label>
+                            </div>
+
+                            <div class="input-field col s12">
+                                <input value="50" id="first_name" type="number" class="validate">
+                                <label for="first_name">Amount Of Slots</label>
+                            </div>
+
+                            <div class="col s12 mt-6">
+                                <div class="divider"></div>
+                            </div>
+
+                            <div class="col s6 mt-6">
+                                <a href="#!" class="btn block modal-close scooter waves-effect waves-light">submit</a>
+                            </div>
+                            <div class="col s6 mt-6">
+                                <a href="#!" class="btn block modal-close waves-effect scooter waves-light">close</a>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!--<div class="modal-footer">-->
+            <!--<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>-->
+            <!--</div>-->
+        </div>
+
+
+        <!--<div class="container">-->
+            <div class="row">
+                <div class="col s12 l6">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="center">
+                                <h5 class="">Animal Husbandry (Bee Keeping)</h5>
+                            </div>
+                        </div>
+
+
+                        <div class="card-action">
+                            <div class="row">
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">edit</a>
+                                </div>
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 l6">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="center">
+                                <h5 class="capitalize">bead  making</h5>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+
+                        <div class="card-action">
+                            <div class="row">
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">edit</a>
+                                </div>
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 l6">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="center">
+                                <h5 class="capitalize">building drawing</h5>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+
+                        <div class="card-action">
+                            <div class="row">
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">edit</a>
+                                </div>
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 l6">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="center">
+                                <h5 class="capitalize">computer and laptop repairs</h5>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+
+                        <div class="card-action">
+                            <div class="row">
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">edit</a>
+                                </div>
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col s12 l6">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="center">
+                                <h5 class="capitalize">crop farming</h5>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+
+                        <div class="card-action">
+                            <div class="row">
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">edit</a>
+                                </div>
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 l6">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="center">
+                                <h5 class="capitalize">drama</h5>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+
+                        <div class="card-action">
+                            <div class="row">
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">edit</a>
+                                </div>
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 l6">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="center">
+                                <h4 class="capitalize">music</h4>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+
+                        <div class="card-action">
+                            <div class="row">
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">edit</a>
+                                </div>
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 l6">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="center">
+                                <h5 class="capitalize">entertainment</h5>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+
+                        <div class="card-action">
+                            <div class="row">
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">edit</a>
+                                </div>
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">delete</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col s12 l6">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="center">
+                                <h5 class="capitalize">event planning</h5>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+
+                        <div class="card-action">
+                            <div class="row">
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">edit</a>
+                                </div>
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 l6">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="center">
+                                <h5 class="capitalize">fish farming</h5>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+
+                        <div class="card-action">
+                            <div class="row">
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">edit</a>
+                                </div>
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 l6">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="center">
+                                <h5 class="capitalize">food processing</h5>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+
+                        <div class="card-action">
+                            <div class="row">
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">edit</a>
+                                </div>
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 l6">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="center">
+                                <h5 class="capitalize">furnishing and woodwork</h5>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+
+                        <div class="card-action">
+                            <div class="row">
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">edit</a>
+                                </div>
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col s12 l6">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="center">
+                                <h5 class="capitalize">hat making</h5>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+
+                        <div class="card-action">
+                            <div class="row">
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">edit</a>
+                                </div>
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 l6">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="center">
+                                <h5 class="capitalize">hotel management</h5>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+
+                        <div class="card-action">
+                            <div class="row">
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">edit</a>
+                                </div>
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 l6">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="center">
+                                <h5 class="capitalize">leather making</h5>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+
+                        <div class="card-action">
+                            <div class="row">
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">edit</a>
+                                </div>
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 l6">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="center">
+                                <h5 class="capitalize">makeup and cosmetics</h5>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+
+                        <div class="card-action">
+                            <div class="row">
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">edit</a>
+                                </div>
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col s12 l6">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="center">
+                                <h5 class="capitalize">motor vehicle repairs</h5>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+
+                        <div class="card-action">
+                            <div class="row">
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">edit</a>
+                                </div>
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 l6">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="center">
+                                <h5 class="capitalize">photography</h5>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+
+                        <div class="card-action">
+                            <div class="row">
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">edit</a>
+                                </div>
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col s12 l6">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="center">
+                                <h5 class="capitalize">setting up a  pharmacy</h5>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+
+                        <div class="card-action">
+                            <div class="row">
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">edit</a>
+                                </div>
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l6">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="center">
+                                <h5 class="capitalize">snail and grass cutter breeding</h5>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+
+                        <div class="card-action">
+                            <div class="row">
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">edit</a>
+                                </div>
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <div class="row">
+
+                <div class="col s12 l6">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="center">
+                                <h5 class="capitalize">soap,detergents and  toiletries </h5>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+
+                        <div class="card-action">
+                            <div class="row">
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">edit</a>
+                                </div>
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col s12 l6">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="center">
+                                <h5 class="capitalize">water treatment and packaging</h5>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+
+                        <div class="card-action">
+                            <div class="row">
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">edit</a>
+                                </div>
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 l6">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="center">
+                                <h5 class="capitalize">welding: metal works and fabrication</h5>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+
+                        <div class="card-action">
+                            <div class="row">
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">edit</a>
+                                </div>
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 l6">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="center">
+                                <h5 class="capitalize">writing and  publication</h5>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+
+                        <div class="card-action">
+                            <div class="row">
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">edit</a>
+                                </div>
+                                <div class="col l6 s12 m6">
+                                    <a href="#modal1" class="btn scooter block waves-effect waves-light modal-trigger">delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        <!--</div>-->
+
+        <!--<div class="divider"></div>-->
+            <!--<%- include('../partials/pagination') %>-->
+    </main>
+
+    <style>
+        header,
+        main,
+        footer {
+            padding-left: 300px;
+        }
+
+        @media only screen and (max-width: 992px) {
+
+            header,
+            main,
+            footer {
+                padding-left: 0;
+            }
+        }
+
+        .small-img {
+            width: 200px;
+        }
+        .smaller-img{
+            width: 30px;
+        }
+
+        nav {
+            padding: 0px 20px;
+        }
+
+        .small-padding {
+            padding: 0px 20px;
+        }
+
+        .mt-5 {
+            margin-top: 5%;
+        }
+
+        .card.my-card {
+            height: 200px;
+        }
+
+        .card-flex {
+            display: flex;
+            height: 200px;
+        }
+
+        .card-flex-items {
+            margin: auto;
+        }
+    </style>
+    <%- include('../partials/footer') %>
+    <%- include('../partials/scripts') %>
+</body>
+
+</html>

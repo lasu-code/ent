@@ -10,7 +10,7 @@
 
 </head>
 
-<body class="blue-grey darken-4">
+<body class="">
     <header class="navbar-fixed">
     <div class="navbar-fixed">
         <nav class="scooter">
@@ -73,18 +73,18 @@
         </nav>
     </div>
 
-    <ul id="loginDropdown" class="dropdown-content">
+    <!-- <ul id="loginDropdown" class="dropdown-content">
         <li><a href="/student/login">STUDENT</a></li>
         <li class="divider"></li>
         <li><a href="/admin/login">ADMIN</a></li>
-    </ul>
+    </ul> -->
 
 
-    <ul id="signupDropdown" class="dropdown-content">
+    <!-- <ul id="signupDropdown" class="dropdown-content">
         <li><a href="/student/signup">STUDENT</a></li>
         <li class="divider"></li>
         <li><a href="/admin/signup">ADMIN</a></li>
-    </ul>
+    </ul> -->
 </header>
     <main>
         <div class="container mt-2">
@@ -151,7 +151,7 @@
                 </div>
                 <div class="divider"></div>
                 <div class="center">
-                    <a href="/student/form" class="btn blue waves-effect-wave-light">submit</a>
+                    <a href="/student/form" class="btn scooter blue waves-effect-wave-light">submit</a>
                 </div>
             </form>
 
@@ -159,16 +159,6 @@
     </main>
     <%- include('../partials/footer') %>
     <%- include('../partials/scripts') %>
-    <script>
-        $(document).ready(function () {
-            $(".button-collapse").sideNav();
-            $('.slider').slider({
-                height: 500
-            });
-            $('.parallax').parallax();
-            $('select').material_select();
-        });
-    </script>
 </body>
 
 </html>
