@@ -52,7 +52,7 @@ router.post('/signup', function (req, res, next) {
 
 // .........................................................................
 router.get('/profile', function (req, res, next) {
-    let id = "5bdb200de97c6f117d05d872";
+    let id = "5bdde4c3e91e772262323ef5";
     studentSchema.findById(id, function(err,getnames){
         res.render('student/index', {titled: getnames, title: 'LASU ENT'});
     //     // res.send(getnames);
