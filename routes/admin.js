@@ -26,10 +26,10 @@ router.get('/signup', function (req, res, next) {
     });
 });
 
-<<<<<<< HEAD
 router.get('/addvocation', function (req, res, next) {
-    res.render('admin/addvocation', {
-=======
+    res.render('admin/addvocation', {})
+});
+
 router.post('/signup', function (req, res, next) {
     // res.render('admin/dashboard');
     console.log(req.body);
@@ -49,8 +49,7 @@ router.post('/signup', function (req, res, next) {
 });
 
 router.get('/dashboard', function (req, res, next) {
-    res.render('admin/Dashboard', {
->>>>>>> 47eebd28dfec92f7b9c2270dd468a390f865f3d2
+    res.render('admin/index', {
         title: 'Admin Dashboard'
     });
 });

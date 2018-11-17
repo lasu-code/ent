@@ -10,7 +10,7 @@ var indexRouter = require('./routes/index');
 
 
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/AdminSignup');
+mongoose.connect('mongodb://localhost:27017/AdminSignup', { useNewUrlParser: true });
 
 
 var app = express();
