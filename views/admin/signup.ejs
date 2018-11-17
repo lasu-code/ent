@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <%- include('../partials/styles') %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body class="blue-grey darken-4">
+    <header class="navbar-fixed">
+        <nav class="scooter">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <a href="#!" class="brand-logo">
+                        <%= title %>
+                    </a>
+                    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="/"><i class="material-icons left">home</i>HOME</a></li>
+                        <li><a href="/admin/login"><i class="material-icons left">lock_outline</i>LOGIN</a></li>
+                        <li class="active"><a href="/admin/signup"><i class="material-icons left">person</i>SIGN UP</a></li>
+                    </ul>
+                </div>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="/"><i class="material-icons left">home</i>HOME</a></li>
+                    <li><a href="/admin/login"><i class="material-icons left">lock_outline</i>LOGIN</a></li>
+                    <li class="active"><a href="/admin/signup"><i class="material-icons left">person</i>SIGN UP</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m12 l6 offset-l3">
+                    <div class="card mt-6">
+                        <div class="scooter card-content">
+                            <div class="center">
+                                <h5 class="uppercase white-text">sign up</h5>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <form action="" class="row" method="post">
+                                <div class="input-field col s12">
+                                    <input id="Surname" type="text" class="validate" name="username">
+                                    <label for="Surname">Username</label>
+                                </div>
+
+                                <div class="input-field col s6">
+                                    <input id="Surname" type="number" data-length="9" class="validate" name="staffId">
+                                    <label for="Surname">Staff ID</label>
+                                </div>
+
+                                <div class="input-field col s6">
+                                    <input id="Phone Number" type="number" data-length="11" class="validate" name="phone">
+                                    <label for="Phone Number">Phone Number</label>
+                                </div>
+                                <div class="input-field col s12">
+                                    <input id="admin Email" type="email" class="validate" name="email">
+                                    <label for="admin Email">Staff Email</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input id="password" type="password" class="validate" name="password">
+                                    <label for="password">Password</label>
+                                </div>
+                                <div class="clearfix"></div>
+
+                                <!-- <div class="input-field col s12">
+                                    <select name="" id="">
+                                        <option value="" disabled selected>CHOOSE YOUR VOCATION</option>
+                                        <option value="1">Animal Husbandry (Bee Keeping)</option>
+                                        <option value="2">Bead Making</option>
+                                        <option value="3">Building Drawing</option>
+                                        <option value="4">Computer and Laptop Repairs</option>
+                                        <option value="5">Crop Farming</option>
+                                        <option value="6">Drama and Entertainment (Drama)</option>
+                                        <option value="7">Drama and Entertainment (Entertainment)</option>
+                                        <option value="8">Drama and Entertainment (Music)</option>
+                                        <option value="9">Event Planning</option>
+                                        <option value="10">Fish Farming</option>
+                                        <option value="11">Food Processing</option>
+                                        <option value="12">Furnishing and wood work</option>
+                                        <option value="13">Hat Making</option>
+                                        <option value="14">Hotel Management</option>
+                                        <option value="15">Leather Making</option>
+                                        <option value="16">Makeup and Cosmetics</option>
+                                        <option value="17">Motor Vehicles repairs </option>
+                                        <option value="18">Photography</option>
+                                        <option value="19">Setting Up a Pharmacy</option>
+                                        <option value="20">Snail Breeding and Grass Cutter Breeding</option>
+                                        <option value="21">Soap Detergent and Toiletries Production</option>
+                                        <option value="22">Tailoring and Fashion Design</option>
+                                        <option value="23">Water Treatment and Packaging</option>
+                                        <option value="24">Welding Metal Works and Fabrication</option>
+                                        <option value="24">Writing and Publishing</option>
+                                    </select>
+                                </div>-->
+                                <div class="card-action">
+                                    <div class="center">
+                                        <button class="btn scooter waves-effect" name="submit" type="submit" value="submit">
+                                            <%= title %>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card scooter">
+                        <div class="card-content">
+                            <div class="center">
+                                <h6 class="uppercase white-text">already have an account? <a class="bold black-text"
+                                        href="/login">login</a></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <%- include('../partials/footer') %>
+    <%- include('../partials/scripts') %>
+    <script>
+        $(document).ready(function () {
+            $(".button-collapse").sideNav();
+            $('.slider').slider();
+            $("select").material_select();
+
+        });
+    </script>
+</body>
+
+</html>

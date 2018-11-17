@@ -1,6 +1,8 @@
-var express = require('express');
-var router = express.Router();
+let express = require('express');
+let router = express.Router();
 let Lasu = require('../models/adminSignup');
+
+const passport = require('../middleware/admin-auth');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
@@ -15,37 +17,36 @@ router.get('/login', function (req, res, next) {
     });
 });
 
-router.post('/login', function (req, res, next) {
-    res.redirect('/admin/categories');
-});
+router.post('/login',
+    passport.authenticate('local', {
+        failureRedirect: '/login',
+        failureFlash: 'Invalid username or password!'}),
+    function (req, res, next) {
+        res.redirect('/admin/categories');
+    }
+);
 
-router.get('/signup', function (req, res, next) {
-    res.render('admin/signup', {
-        title: 'Admin Signup',
-        active: "active"
-    });
-});
-
-router.get('/addvocation', function (req, res, next) {
-    res.render('admin/addvocation', {})
-});
+// router.get('/signup', function (req, res, next) {
+//     res.render('admin/signup', {
+//         title: 'Admin Signup',
+//         active: "active"
+//     });
+// });
 
 router.post('/signup', function (req, res, next) {
-    // res.render('admin/dashboard');
-    console.log(req.body);
-
     let Admins = {
-      usernames: req.body.surname,
-      staffIds: req.body.staffId,
-      PhoneNumbers: req.body.phone,
-      StaffEmails: req.body.email,
-      
+        username: req.body.username,
+        staffId: req.body.staffId,
+        phoneNumber: req.body.phone,
+        staffEmail: req.body.email,
+        password: req.body.password,
+        is_super: true
     }
     let data = new Lasu(Admins);
 
     data.save();
 
-    res.redirect('/admin/categories');
+    res.redirect('/admin/dashboard');
 });
 
 router.get('/dashboard', function (req, res, next) {
@@ -64,6 +65,10 @@ router.get('/singlecategory', function (req, res, next) {
     res.render('admin/singlecategory', {
         title: 'Admin Dashboard'
     });
+});
+
+router.get('/addvocation', function (req, res, next) {
+    res.render('admin/addvocation', {})
 });
 
 router.get('/modifyvocations', function (req, res, next) {

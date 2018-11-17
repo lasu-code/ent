@@ -1,19 +1,28 @@
 const mongoose = require('mongoose');
-// mongoose.connect('mongodb://localhost:27017/AdminSignup');
-
 const Schema = mongoose.Schema;
 
-let TweetSchema = new Schema ({
-
-        usernames: String,
-        staffIds: String,
-        PhoneNumbers: String,
-        StaffEmails: String,
-		
-
+let AdminSchema = new Schema ({
+    username: {
+        type: String,
+        default: 'Admin'
+    },
+    staffId: {
+        type: String,
+        required: true
+    },
+    phoneNumber: String,
+    staffEmail: String,
+    password: {
+        type: String,
+        required: true
+    },
+    is_super: {
+        type: Boolean,
+        default: false
+    },
     createdDate:{
         type: Date,
         default: Date.now
     }
 })
-module.exports = mongoose.model('adminsignup', TweetSchema);
+module.exports = mongoose.model('adminsignup', AdminSchema);
