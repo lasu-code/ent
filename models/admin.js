@@ -1,9 +1,11 @@
 const mongoose = require('mongoose');
+const bcrypt = require("bcrypt-nodejs")
 const Schema = mongoose.Schema;
 
 let AdminSchema = new Schema ({
-    username: {
+    name: {
         type: String,
+        trim: true,
         default: 'Admin'
     },
     staffId: {
@@ -25,4 +27,13 @@ let AdminSchema = new Schema ({
         default: Date.now
     }
 })
-module.exports = mongoose.model('adminsignup', AdminSchema);
+
+AdminSchema.methods.generateHash = function (password) {
+    return bcrypt.hashSync(password, bcrypt.genSaltSync(10))
+}
+
+AdminSchema.methods.validatePassword = function (password) {
+    return bcrypt.compareSync(password, this.password)
+}
+
+module.exports = mongoose.model('Admin', AdminSchema);

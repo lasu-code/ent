@@ -1,0 +1,17 @@
+<div class="clearfix"></div>
+<% if (messages.error) { %>
+    <div class="alert alert-danger alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true"> &times; </button>
+        <p class="text-center">
+            <%= messages.error %>
+        </p>
+    </div>
+<% } else if (messages.success) { %>
+    <div class="alert alert-success alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true"> &times; </button>
+        <p class="text-center">
+            <%= messages.success %>
+        </p>
+    </div>
+<% } %>
+<div class="clearfix"></div>

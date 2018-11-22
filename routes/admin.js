@@ -1,10 +1,16 @@
 let express = require('express');
 let router = express.Router();
-let Lasu = require('../models/adminSignup');
+let Admin = require('../models/admin');
+const passport = require('passport');
 
-const passport = require('../middleware/admin-auth');
+function checkLoginStatus (req, res, next) {
+    if (req.isAuthenticated()) {
+        return next();
+    }
+    req.flash('error', 'Login to continue!')
+    res.redirect('/admin/login');
+}
 
-/* GET home page. */
 router.get('/', function (req, res, next) {
     res.render('admin/', {
         title: 'Admin Login'
@@ -13,45 +19,33 @@ router.get('/', function (req, res, next) {
 
 router.get('/login', function (req, res, next) {
     res.render('admin/login', {
-        title: 'Admin Login'
+        title: 'Admin Login', loginError: ''
     });
 });
 
-router.post('/login',
-    passport.authenticate('local', {
-        failureRedirect: '/login',
-        failureFlash: 'Invalid username or password!'}),
-    function (req, res, next) {
-        res.redirect('/admin/categories');
-    }
-);
+router.post('/login', passport.authenticate('loginAdmin', {
+    successRedirect: '/admin/dashboard',
+    failureRedirect: '/admin/login',
+    failureFlash: true
+}));
 
-// router.get('/signup', function (req, res, next) {
-//     res.render('admin/signup', {
-//         title: 'Admin Signup',
-//         active: "active"
-//     });
-// });
-
-router.post('/signup', function (req, res, next) {
-    let Admins = {
-        username: req.body.username,
-        staffId: req.body.staffId,
-        phoneNumber: req.body.phone,
-        staffEmail: req.body.email,
-        password: req.body.password,
-        is_super: true
-    }
-    let data = new Lasu(Admins);
-
-    data.save();
-
-    res.redirect('/admin/dashboard');
+router.get('/signup', function (req, res, next) {
+    res.render('admin/signup', {
+        title: 'Admin Signup',
+        active: "active"
+    });
 });
 
-router.get('/dashboard', function (req, res, next) {
+router.post('/signup', passport.authenticate('registerAdmin', {
+    successRedirect: '/admin/dashboard',
+    failureRedirect: '/admin/login',
+    failureFlash: true
+}))
+
+router.get('/dashboard', checkLoginStatus, function (req, res, next) {
     res.render('admin/index', {
-        title: 'Admin Dashboard'
+        title: 'Admin Dashboard',
+        isLogin: req.isAuthenticated()
     });
 });
 

@@ -44,24 +44,23 @@
                             </div>
                         </div>
                         <div class="card-content">
-
+                            <% include ../partials/alert %>
 
                             <form action="#" class="row" method="POST">
                                 <div class="input-field col s12">
-                                    <input id="matric_number" type="number" data-length="9" class="validate">
-                                    <label for="matric_number">MATRIC NUMBER</label>
+                                    <input id="staffId" type="number" data-length="9" class="validate" name="staffId">
+                                    <label for="staffId">STAFF ID</label>
                                 </div>
 
                                 <div class="input-field col s12">
-                                    <input id="surname" type="text" class="validate">
-                                    <label for="surname">SURNAME</label>
+                                    <input id="password" type="password" class="validate" name="password">
+                                    <label for="password">PASSWORD</label>
                                 </div>
                                 <div class="center">
-                                        <input type="submit" value="log in" class="btn scooter waves-effect waves-light uppercase blue">
-                                    
-                                    </div>
+                                    <input type="submit" value="log in" class="btn scooter waves-effect waves-light uppercase blue">
+                                </div>
                             </form>
-                          
+
                         </div>
                     </div>
                     <div class="card scooter">

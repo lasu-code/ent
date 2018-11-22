@@ -3,7 +3,7 @@
 
 <head>
     <title>
-        <!-- <%= title %> -->
+        <%= title %>
     </title>
     <%- include('../partials/styles') %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,14 +15,16 @@
     </header>
 
     <ul id="slide-out" class="side-nav fixed">
-        <li><div class="user-view">
+        <li>
+            <div class="user-view">
                 <div class="background">
                     <img src="../images/bg.jpg">
                 </div>
                 <a href="#!user"><img class="circle" src="../images/rachel.png"></a>
                 <a href="#!name"><span class="white-text name">John Doe</span></a>
                 <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
-            </div></li>
+            </div>
+        </li>
         <li><a class="subheader capitalize">collections</a></li>
         <li class="active"><a class="waves-effect" href="/admin/">All Categories</a></li>
         <li><a class="waves-effect" href="/admin/combinedlist">Combined List</a></li>
@@ -30,6 +32,10 @@
         <li><a class="subheader capitalize">actions</a></li>
         <li><a class="waves-effect" href="/admin/addvocation">Add Vocation</a></li>
         <li><a class="waves-effect" href="/admin/modifyvocations">Edit/Delete</a></li>
+        <% if (isLogin) { %>
+            <li><div class="divider"></div></li>
+            <li><a class="waves-effect" href="/logout">Logout</a></li>
+        <% } %>
     </ul>
 
     <main>

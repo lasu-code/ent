@@ -9,10 +9,9 @@ router.get('/', function (req, res, next) {
     });
 });
 
-router.get('/test', function (req, res, next) {
-    res.render('test', {
-        title: 'LASU-ENT'
-    });
+router.get('/logout', function (req, res) {
+    req.logout();
+    res.redirect('/')
 });
 
 
