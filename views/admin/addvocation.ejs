@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <%- include('../partials/styles') %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body class="">
+    <main>
+        <ul id="slide-out" class="side-nav fixed">
+            <li>
+                <div class="user-view">
+                    <div class="background">
+                        <img src="../images/bg.jpg">
+                    </div>
+                    <a href="#!user"><img class="circle" src="../images/rachel.png"></a>
+                    <a href="#!name"><span class="white-text name">John Doe</span></a>
+                    <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+                </div>
+            </li>
+            <li><a class="subheader capitalize">collections</a></li>
+            <li><a class="waves-effect" href="/admin/">All Categories</a></li>
+            <li><a class="waves-effect" href="/admin/combinedlist">Combined List</a></li>
+            <li>
+                <div class="divider"></div>
+            </li>
+            <li><a class="subheader capitalize">actions</a></li>
+            <li class="active"><a class="waves-effect" href="/admin/addvocation">Add Vocation</a></li>
+            <li><a class="waves-effect" href="/admin/modifyvocations">Edit/Delete</a></li>
+
+            <!--<li><a class="waves-effect" href="#!">Third Link With Waves</a></li>-->
+            <!--<li><a class="waves-effect" href="#!">Third Link With Waves</a></li>-->
+        </ul>
+
+
+        <div class="navbar-fixed">
+            <nav class="scooter">
+                <div class="nav-wrapper">
+                    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+                    <div class="col s12">
+                        <a href="" class="breadcrumb">ADMIN</a>
+                        <a href="/admin/dashboard" class="breadcrumb">ADD NEW</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <form class="s12 mt-10" action="#" method="POST">
+                    <div class="row">
+
+                        <div class="input-field col s12">
+                            <input placeholder="" id="vocation_title" type="text" class="validate" name="title">
+                            <label for="vocation_title">Vocation Title</label>
+                        </div>
+
+                        <div class="input-field col s12">
+                            <input placeholder="" id="number_of_slots" name="numberOfSlot" type="number" class="validate">
+                            <label for="number_of_slots">Number Of Slots</label>
+                        </div>
+
+
+
+
+
+                            <div class="input-field col s12">
+                                <select name="isActive" id="">
+                                    <option value="" disabled selected>CHOOSE YOUR OPTION</option>
+                                    <option value="1">ACTIVE</option>
+                                    <option value="2">INACTIVE</option>
+                                </select>
+                            </div>
+
+                        <div class="col s12 mt-5">
+                               
+
+                            <div class="center">
+                                     <input type="submit" value="SUBMIT" class="btn scooter waves-effect waves-light" >
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--<div class="divider"></div>-->
+        <!--<%- include('../partials/pagination') %>-->
+    </main>
+
+    <style>
+        header,
+        main,
+        footer {
+            padding-left: 300px;
+        }
+
+        @media only screen and (max-width: 992px) {
+
+            header,
+            main,
+            footer {
+                padding-left: 0;
+            }
+        }
+
+        .small-img {
+            width: 200px;
+        }
+
+        .smaller-img {
+            width: 30px;
+        }
+
+        nav {
+            padding: 0px 20px;
+        }
+
+        .small-padding {
+            padding: 0px 20px;
+        }
+
+        .mt-5 {
+            margin-top: 5%;
+        }
+
+        .card.my-card {
+            height: 200px;
+        }
+
+        .card-flex {
+            display: flex;
+            height: 200px;
+        }
+
+        .card-flex-items {
+            margin: auto;
+        }
+    </style>
+    <%- include('../partials/footer') %>
+    <%- include('../partials/scripts') %>
+</body>
+
+</html>

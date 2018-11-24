@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <%- include('../partials/styles') %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+    <main>
+        <ul id="slide-out" class="side-nav fixed">
+            <li><div class="user-view">
+                    <div class="background">
+                        <img src="../images/bg.jpg">
+                    </div>
+                    <a href="#!user"><img class="circle" src="../images/rachel.png"></a>
+                    <a href="#!name"><span class="white-text name">John Doe</span></a>
+                    <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+                </div></li>
+            <li><a class="subheader capitalize">collections</a></li>
+            <li><a class="waves-effect" href="/admin/">All Categories</a></li>
+            <li class="active"><a class="waves-effect" href="/admin/combinedlist">Combined List</a></li>
+            <li><div class="divider"></div></li>
+            <li><a class="subheader capitalize">actions</a></li>
+            <li><a class="waves-effect" href="/admin/addvocation">Add Vocation</a></li>
+            <li><a class="waves-effect" href="/admin/modifyvocations">Edit/Delete</a></li>
+        </ul>
+
+        <div class="navbar-fixed">
+            <nav class="scooter">
+                <div class="nav-wrapper">
+                    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+
+                    <div class="col s12">
+                        <a href="" class="breadcrumb">ADMIN</a>
+                        <a href="/admin/dashboard" class="breadcrumb">COMBINED LIST</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <div class="center">
+                    <p>ADD VOCATION</p>
+                    <div class="divider"></div>
+                </div>
+                <div class="container">
+                    <br><br><br><br>
+                    <div class="row">
+                        <div class="input-field col s12 mt-5">
+                            <input type="text" name="" id="">
+                            <label for="">VOCATION</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br> <br> <br>
+            <div class="divider">
+
+            </div>
+            <div class="modal-footer">
+                <div class="container">
+                    <a href="#!" class="modal-action blue  right waves-effect waves-light btn">Agree</a>
+                    <a href="#!" class="modal-action blue modal-close left waves-effect waves-light btn">close</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <style>
+        header,
+        main,
+        footer {
+            padding-left: 300px;
+        }
+
+        @media only screen and (max-width: 992px) {
+
+            header,
+            main,
+            footer {
+                padding-left: 0;
+            }
+        }
+
+        .small-img {
+            width: 200px;
+        }
+
+        .smaller-img {
+            width: 30px;
+        }
+
+        nav {
+            padding: 0px 20px;
+        }
+
+        .small-padding {
+            padding: 0px 20px;
+        }
+
+        .mt-5 {
+            margin-top: 5%;
+        }
+
+        .card.my-card {
+            height: 200px;
+        }
+
+        .card-flex {
+            display: flex;
+            height: 200px;
+        }
+
+        .card-flex-items {
+            margin: auto;
+        }
+    </style>
+    <%- include('../partials/footer') %>
+    <%- include('../partials/scripts') %>
+    <script>
+        $(document).ready(function () {
+
+        });
+    </script>
+</body>
+
+</html>
