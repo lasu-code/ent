@@ -14,7 +14,7 @@ const studentRouter = require('./routes/student');
 const indexRouter = require('./routes/index');
 
 // inject passport config
-require('./middleware/auth.js')
+require('./middleware/auth.js') 
 
 // mongoose init
 const dbName = 'ent_db';
